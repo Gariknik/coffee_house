@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import mainBG from '../assets/Mainbg.svg';
-import BeansLogo from '../assets/Beanslogo.svg';
+import mainBG from '../../assets/Mainbg.svg';
+import BeansLogo from '../../assets/Beanslogo.svg';
 
-const HomeCoffee = ()=> {
+const HomeCoffeeFirstScrean = ()=> {
     return (
         <StyledSection>
             <StyledContainer>
@@ -22,14 +22,15 @@ const HomeCoffee = ()=> {
         </StyledSection>
     );
 };
-export default HomeCoffee;
+export default HomeCoffeeFirstScrean;
 
 const StyledSection = styled.section`
     width: 100%;
-    height: 640px;
+    height: 100%;
     background: url(${mainBG});
     background-size: cover;
     background-position: top;
+    padding: 11.25rem 0;
 `;
 
 const StyledContainer = styled.div`

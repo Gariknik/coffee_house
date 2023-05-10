@@ -4,16 +4,16 @@ import {Link} from "react-router-dom";
 
 const Header = () => {
     return(
-        <StyledSection>
+        <StyledSection className="light">
             <StyledContainer>
-                <StyledLink to="/">
+                <StyledLink to="/" className="dark">
                     <StyledWrap>
                         <StyledImg src={logo} alt="IconLOGO" />
                         Coffee house
                     </StyledWrap>
                 </StyledLink>
-                <StyledLink to="/our">Our coffee</StyledLink>
-                <StyledLink to="/for">For your pleasure</StyledLink>
+                <StyledLink to="/our" className="dark">Our coffee</StyledLink>
+                <StyledLink to="/for" className="dark">For your pleasure</StyledLink>
             </StyledContainer>
         </StyledSection>
     );
@@ -22,10 +22,21 @@ const Header = () => {
 export default Header;
 
 const StyledSection = styled.header`
-    width: 100%;
-    height: 6rem;
-    position: fixed;
-    z-index: 999;
+  width: 100%;
+  color: white;
+  height: 6rem;
+  position: fixed;
+  z-index: 999;
+
+  &.dark {
+    color: white;
+    mix-blend-mode: normal;
+  }
+
+  &.light {
+    color: black;
+    mix-blend-mode: exclusion;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -44,17 +55,25 @@ const StyledWrap = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-    color: #fff;
     text-decoration: none;
     font-weight: 400;
     font-size: 0.75rem;
-    
+    color: white;
+    :hover {
+        font-weight: 700;
+    }
+    &.dark {
+        color: white;
+    }
+
+    &.light {
+        color: black;
+    }
 `;
 
 const StyledImg = styled.img`
     width: 35px;
     height: 35px;
     display: block;
-    height: 2rem;
 `;
 

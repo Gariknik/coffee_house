@@ -2,12 +2,12 @@ import OurCoffeeFirstSection from "./OurCoffeeFirstSection";
 import OurCoffeeSecondSection from "./OurCoffeeSecondSection";
 import OurCoffeeThirdSection from "./OurCoffeeThirdSection";
 
-const OurCoffee = () => {
+const OurCoffee = ({data, handleCardClick}) => {
     return (
         <>
             <OurCoffeeFirstSection />
             <OurCoffeeSecondSection />
-            <OurCoffeeThirdSection />
+            <OurCoffeeThirdSection data={data} handleCardClick={handleCardClick}/>
         </>
     );
 };

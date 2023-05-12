@@ -2,11 +2,11 @@ import AboutItCardFirstSection from "./AboutItCardFirstSection";
 import AboutItCardSecondSection from "./AboutItCardSecondSection";
 
 
-const AboutItCard = () => {
+const AboutItCard = ({data, id}) => {
     return (
         <>
             <AboutItCardFirstSection />
-            <AboutItCardSecondSection />
+            <AboutItCardSecondSection data={data} id={id} />
         </>
     );
 };

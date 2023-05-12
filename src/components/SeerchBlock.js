@@ -1,12 +1,19 @@
 import styled from 'styled-components';
+import {useState} from "react";
 
-const SeerchBlock = () => {
+const SeerchBlock = ({onUpdateSearch}) => {
+    const [name, setName] = useState('');
+
+    const handleSeerchTyping = (e) => {
+        setName(e.target.value);
+        onUpdateSearch(e.target.value);
+    };
     return (
         <StyledBlock>
             <StyledLabel>
                 Lookiing for
             </StyledLabel>
-            <StyledInput type="text" placeholder='start typing here...' />
+            <StyledInput type="text" placeholder='start typing here...' onChange={handleSeerchTyping} value={name} />
         </StyledBlock>
     );
 };

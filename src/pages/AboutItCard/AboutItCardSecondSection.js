@@ -3,7 +3,9 @@ import BeansLogoBlack from "../../assets/BeanslogoBlack.svg";
 import PhotoInCard from "../../assets/PhotoInCard.svg";
 
 
-const AboutItCardSecondSection = () => {
+const AboutItCardSecondSection = ({data, id}) => {
+    const getTargetData = data.find(item => item.id === id);
+
     return (
         <StyledSection>
             <StyledContainer>
@@ -14,13 +16,13 @@ const AboutItCardSecondSection = () => {
                     </StyledTitleTwo>
                     <StyledBeans src={BeansLogoBlack} alt='beans logo icon' />
                     <StyledParagraph>
-                        <b>Country: </b> Brazil
+                        <b>Country: </b> {getTargetData.country}
                     </StyledParagraph>
                     <StyledParagraph>
-                        <b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <b>Description:</b> {getTargetData.description}
                     </StyledParagraph>
                     <StyledParagraph>
-                        <b>Price: </b> 16.99$
+                        <b>Price: </b> {getTargetData.price}$
                     </StyledParagraph>
                 </StyledWrappContent>
             </StyledContainer>

@@ -1,15 +1,21 @@
 import styled from 'styled-components';
 
-const FilterGoodsBlock = () => {
+
+const FilterGoodsBlock = ({onUpdateFilter}) => {
+    const handleFilterClick = (e) => {
+        onUpdateFilter(e.target.value);
+    };
+
     return (
         <StyledBlock>
             <StyledLabel>
                 Or filter
             </StyledLabel>
             <StyledButtonBlock>
-                <StyledButton type="button">Brazil</StyledButton>
-                <StyledButton type="button">Kenya</StyledButton>
-                <StyledButton type="button">Columbia</StyledButton>
+                <StyledButton type="button" value="Brazil" onClick={ handleFilterClick}>Brazil</StyledButton>
+                <StyledButton type="button" value="Kenya" onClick={ handleFilterClick}>Kenya</StyledButton>
+                <StyledButton type="button" value="Columbia" onClick={ handleFilterClick}>Columbia</StyledButton>
+                <StyledButton type="button" value="All" onClick={ handleFilterClick}>All</StyledButton>
             </StyledButtonBlock>
 
         </StyledBlock>
@@ -18,7 +24,7 @@ const FilterGoodsBlock = () => {
 export default FilterGoodsBlock;
 
 const StyledBlock = styled.div`
-    width: 326px;
+    width: 400px;
     height: 30px;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
     margin: 0 0 2rem;

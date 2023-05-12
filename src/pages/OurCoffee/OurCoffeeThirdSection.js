@@ -1,24 +1,55 @@
+import {useState} from "react";
+
 import styled from "styled-components";
 import CardGood from "../../components/CardGood";
 import FilterGoodsBlock from "../../components/FilterGoodsBlock";
 import SeerchBlock from "../../components/SeerchBlock";
 
 
-const OurCoffeeThirdSection = () => {
+
+const OurCoffeeThirdSection = ({data, handleCardClick}) => {
+
+    const [country, setCountry] = useState('All');
+    const [name, setName] = useState('');
+
+    const onSeerchTyping = (items, name)=> {
+        if (name.length === 0) return items;
+        if (name.length !== 0) {
+            return items.filter(item => item.name.includes(name));
+        }
+        return items;
+    };
+
+    const onUpdateSearch = (name) => {
+        setName(name);
+    };
+
+    const onFilterCountry = (items ,country)=> {
+        if (country !== 'All') {
+            return items.filter(item => item.country === country);
+        }
+        return items;
+    };
+
+    const onUpdateFilter = (country) => {
+        setCountry(country);
+    };
+
+
+    const visinleData = onFilterCountry(onSeerchTyping(data, name), country);
+    const showCardsData = visinleData.map(item => {
+        const key = item.id;
+        return <CardGood key={key} {...item} onCardClick={(id) => handleCardClick(id)}/>;
+    });
     return (
         <StyledSection>
             <StyledContainer>
                 <StyledWrappFilterSeerchBlocks>
-                    <SeerchBlock />
-                    <FilterGoodsBlock />
+                    <SeerchBlock onUpdateSearch={onUpdateSearch}/>
+                    <FilterGoodsBlock onUpdateFilter={onUpdateFilter}/>
                 </StyledWrappFilterSeerchBlocks>
                 <StyledWrappContent>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
+                    {showCardsData}
                 </StyledWrappContent>
             </StyledContainer>
         </StyledSection>
@@ -35,7 +66,7 @@ const StyledSection = styled.section`
 `;
 
 const StyledContainer = styled.div`
-    padding: 0 6rem;
+    padding: 0 8rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -44,11 +75,6 @@ const StyledContainer = styled.div`
     
 `;
 
-const StyledTitle = styled.h1`
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 400;
-`;
 
 const StyledWrappFilterSeerchBlocks = styled.div`
     width: 100%;
@@ -60,7 +86,7 @@ const StyledWrappFilterSeerchBlocks = styled.div`
 const StyledWrappContent = styled.div`
     max-width: 60rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     
 `;

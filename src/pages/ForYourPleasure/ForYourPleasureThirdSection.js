@@ -2,17 +2,16 @@ import styled from "styled-components";
 import CardGood from "../../components/CardGood";
 
 
-const ForYourPleasureThirdSection = () => {
+const ForYourPleasureThirdSection = ({data}) => {
+    const showCardsData = data.map(item => {
+        const key = item.id;
+        return <CardGood key={key} {...item}/>;
+    });
     return (
         <StyledSection>
             <StyledContainer>
                 <StyledWrappContent>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
-                    <CardGood/>
+                    {showCardsData}
                 </StyledWrappContent>
             </StyledContainer>
         </StyledSection>

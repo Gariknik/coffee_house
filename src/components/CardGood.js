@@ -1,37 +1,42 @@
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
-import cardImgTwo from "../assets/cards/cardImgTwo.svg";
-import { useNavigate } from "react-router-dom";
 
-const CardGood = () => {
-    const navigate = useNavigate();
 
+const CardGood = ({id, image, country, price, name, onCardClick}) => {
     const handleCardClick = () => {
-        navigate('/about-it');
+        onCardClick(id);
     };
-
     return (
-        <StyledCard onClick={handleCardClick}>
-            <StyledImgCard src={cardImgTwo} alt="card's image" />
-            <StyledParagraph>
-                Presto Coffee Beans 1 kg
-            </StyledParagraph>
-            <StyledParagraph>
-                Kenya
-            </StyledParagraph>
-            <StyledPrice>
-                6.99$
-            </StyledPrice>
-        </StyledCard>
+        <StyledLink to="/about-it">
+            <StyledCard onClick={handleCardClick}>
+                <StyledImgCard src={image} alt="card's image" />
+                <StyledParagraph>
+                    {name}
+                </StyledParagraph>
+                <StyledParagraph>
+                    {country}
+                </StyledParagraph>
+                <StyledPrice>
+                    {price}$
+                </StyledPrice>
+            </StyledCard>
+        </StyledLink>
+
     );
 };
 export default CardGood;
+
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
+`;
 
 
 const StyledCard = styled.div`
     width: 220px;
     height: 260px;                  
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
-    margin: 0 3.5rem 2rem 0;
+    margin: 0 3rem 3rem;
     background: rgba(255, 255, 255, 0.65);
     border-radius: 8px;
     display: flex;

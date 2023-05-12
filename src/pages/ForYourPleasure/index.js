@@ -2,12 +2,12 @@ import ForYourPleasureFirstSection from "./ForYourPleasureFirstSection";
 import ForYourPleasureSecondSection from "./ForYourPleasureSecondSection";
 import ForYourPleasureThirdSection from "./ForYourPleasureThirdSection";
 
-const ForYourPleasure = () => {
+const ForYourPleasure = ({data}) => {
     return (
         <>
             <ForYourPleasureFirstSection />
             <ForYourPleasureSecondSection />
-            <ForYourPleasureThirdSection />
+            <ForYourPleasureThirdSection data={data} />
         </>
     );
 };

@@ -1,28 +1,29 @@
 import styled from "styled-components";
 import BeansLogoBlack from "../../assets/BeanslogoBlack.svg";
-import PhotoInCard from "../../assets/PhotoInCard.svg";
 
 
 const AboutItCardSecondSection = ({data, id}) => {
-    const getTargetData = data.find(item => item.id === id);
+    const targetData = data.find(item => item.id === id);
+
+    if (!targetData) return null;
 
     return (
         <StyledSection>
             <StyledContainer>
-                <StyledImg src={PhotoInCard} alt="image of section" />
+                <StyledImg src={targetData.bigPhoto} alt="image of section" />
                 <StyledWrappContent>
                     <StyledTitleTwo>
                         About It
                     </StyledTitleTwo>
                     <StyledBeans src={BeansLogoBlack} alt='beans logo icon' />
                     <StyledParagraph>
-                        <b>Country: </b> {getTargetData.country}
+                        <b>Country: </b> {targetData.country}
                     </StyledParagraph>
                     <StyledParagraph>
-                        <b>Description:</b> {getTargetData.description}
+                        <b>Description:</b> {targetData.description}
                     </StyledParagraph>
                     <StyledParagraph>
-                        <b>Price: </b> {getTargetData.price}$
+                        <b>Price: </b> {targetData.price}$
                     </StyledParagraph>
                 </StyledWrappContent>
             </StyledContainer>

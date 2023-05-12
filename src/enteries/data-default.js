@@ -1,6 +1,10 @@
 import cardImgOne from '../assets/cards/cardImgOne.svg';
 import cardImgTwo from '../assets/cards/cardImgTwo.svg';
 import cardImgThree from '../assets/cards/cardImgThree.svg';
+import bigAromistoPhoto from "../assets/PhotoInCard.svg";
+import bigSolimoPhoto from "../assets/bigSolimoPhoto.jpg";
+import bigPrestoPhoto from "../assets/bigPrestoPhoto.jpg";
+
 
 const data = [
     {
@@ -9,7 +13,8 @@ const data = [
         name: "Solimo Coffee Beans 2 kg",
         price: 10.73,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Brazil"
+        country: "Brazil",
+        bigPhoto: bigSolimoPhoto
     },
     {
         id: 2,
@@ -17,7 +22,8 @@ const data = [
         name: "Presto Coffee Beans 1 kg",
         price: 15.99,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Brazil"
+        country: "Brazil",
+        bigPhoto: bigPrestoPhoto
     },
     {
         id: 3,
@@ -25,7 +31,8 @@ const data = [
         name: "AROMISTICO Coffee 1 kg",
         price: 6.99,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Brazil"
+        country: "Brazil",
+        bigPhoto: bigAromistoPhoto
     },
     {
         id: 4,
@@ -33,7 +40,8 @@ const data = [
         name: "Solimo Coffee Beans 2 kg",
         price: 10.73,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Kenya"
+        country: "Kenya",
+        bigPhoto: bigSolimoPhoto
     },
     {
         id: 5,
@@ -41,7 +49,8 @@ const data = [
         name: "Presto Coffee Beans 1 kg",
         price: 15.99,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Kenya"
+        country: "Kenya",
+        bigPhoto: bigPrestoPhoto
     },
     {
         id: 6,
@@ -49,7 +58,8 @@ const data = [
         name: "AROMISTICO Coffee 1 kg",
         price: 6.99,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Kenya"
+        country: "Kenya",
+        bigPhoto: bigAromistoPhoto
     },
     {
         id: 7,
@@ -57,7 +67,8 @@ const data = [
         name: "Solimo Coffee Beans 2 kg",
         price: 10.73,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Columbia"
+        country: "Columbia",
+        bigPhoto: bigSolimoPhoto
     },
     {
         id: 8,
@@ -65,7 +76,8 @@ const data = [
         name: "Presto Coffee Beans 1 kg",
         price: 15.99,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Columbia"
+        country: "Columbia",
+        bigPhoto: bigPrestoPhoto
     },
     {
         id: 9,
@@ -73,7 +85,8 @@ const data = [
         name: "AROMISTICO Coffee 1 kg",
         price: 6.99,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        country: "Columbia"
+        country: "Columbia",
+        bigPhoto: bigAromistoPhoto
     }
 ];
 

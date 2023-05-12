@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import mainBG from '../../assets/Mainbg.svg';
 import BeansLogo from '../../assets/Beanslogo.svg';
 
 const HomeCoffeeFirstScrean = ()=> {
+
     return (
         <StyledSection>
             <StyledContainer>
@@ -17,7 +19,9 @@ const HomeCoffeeFirstScrean = ()=> {
                 <StyledTitleSecond>
                     Want to try our beans?
                 </StyledTitleSecond>
-                <StyledButton type="button">More</StyledButton>
+                <StyledLink to="/for">
+                    <StyledButton type="button" >More</StyledButton>
+                </StyledLink>
             </StyledContainer>
         </StyledSection>
     );
@@ -57,6 +61,10 @@ const StyledTitleSecond = styled.h2`
     color: #fff;
     font-size: 1.5rem;
     font-weight: 400;
+`;
+
+const StyledLink = styled(Link)`
+    text-decoration: none;
 `;
 
 const StyledButton = styled.button`

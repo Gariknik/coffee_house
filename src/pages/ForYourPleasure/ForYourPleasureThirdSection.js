@@ -2,10 +2,10 @@ import styled from "styled-components";
 import CardGood from "../../components/CardGood";
 
 
-const ForYourPleasureThirdSection = ({data}) => {
+const ForYourPleasureThirdSection = ({data, handleCardClick}) => {
     const showCardsData = data.map(item => {
         const key = item.id;
-        return <CardGood key={key} {...item}/>;
+        return <CardGood key={key} {...item} onCardClick={(id) => handleCardClick(id)}/>;
     });
     return (
         <StyledSection>

@@ -27,7 +27,7 @@ const App = () => {
               <Route path="/" element={<HomeCoffee />} />
               <Route path="/our" element={<OurCoffee data={data} handleCardClick={handleCardClick}/>} />
               <Route path="/about-it" element={<AboutItCard data={data} id={selectedItemId}/>} />
-              <Route path="/for" element={<ForYourPleasure data={data}/>} />
+              <Route path="/for" element={<ForYourPleasure data={data} handleCardClick={handleCardClick}/>} />
               <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />
